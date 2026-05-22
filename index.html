@@ -1,0 +1,216 @@
+
+<style>
+.section { margin: 1.5rem 0; }
+.section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+.metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
+.metric-val { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+.metric-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+.bar-row { display: flex; align-items: center; gap: 8px; margin: 5px 0; font-size: 13px; }
+.bar-label { width: 210px; flex-shrink: 0; color: var(--color-text-primary); }
+.bar-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 18px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 6px; font-size: 11px; font-weight: 500; white-space: nowrap; }
+.bar-count { width: 24px; text-align: right; color: var(--color-text-secondary); font-size: 12px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--border-radius-md); margin: 2px 3px; }
+.badge-blue { background: #E6F1FB; color: #0C447C; }
+.badge-teal { background: #E1F5EE; color: #085041; }
+.badge-amber { background: #FAEEDA; color: #633806; }
+.badge-coral { background: #FAECE7; color: #712B13; }
+.badge-purple { background: #EEEDFE; color: #3C3489; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.issue-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+.issue-head { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.issue-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+.highlight { color: var(--color-text-primary); font-weight: 500; }
+.likert-row { display: flex; gap: 6px; margin: 8px 0; align-items: center; }
+.likert-seg { border-radius: 3px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; white-space: nowrap; padding: 0 6px; }
+.likert-label { font-size: 12px; color: var(--color-text-secondary); min-width: 160px; }
+@media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } .metric-row { grid-template-columns: repeat(2, 1fr); } .bar-label { width: 140px; } }
+</style>
+
+<h2 class="sr-only">สรุปผลแบบสอบถามเพื่อปรับปรุงหลักสูตร วท.บ. คณิตศาสตร์ มหิดล</h2>
+
+<div style="padding: 1rem 0 0;">
+
+<div class="metric-row">
+  <div class="metric"><div class="metric-val">14</div><div class="metric-label">นักศึกษาปัจจุบัน</div></div>
+  <div class="metric"><div class="metric-val">20</div><div class="metric-label">ศิษย์เก่า</div></div>
+  <div class="metric"><div class="metric-val">7/14</div><div class="metric-label">บอกว่าหลักสูตรยาก</div></div>
+  <div class="metric"><div class="metric-val">14/14</div><div class="metric-label">ใช้ Gen AI ช่วยเรียน</div></div>
+</div>
+
+<div class="section">
+  <div class="section-title">ประเด็นที่ 1 · ภาระและความยากของหลักสูตร</div>
+  <div class="two-col">
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">นักศึกษาปัจจุบัน: ระดับความยาก (n=14)</div>
+      <div class="likert-row">
+        <div class="likert-seg" style="background:#F7C1C1; color:#791F1F; width:80px;">ยากมาก 1</div>
+        <div class="likert-seg" style="background:#F0957B; color:#4A1B0C; width:130px;">ค่อนข้างยาก 7</div>
+        <div class="likert-seg" style="background:#C0DD97; color:#27500A; width:95px;">พอดี 5</div>
+        <div class="likert-seg" style="background:#9FE1CB; color:#04342C; width:35px;">ง่าย 1</div>
+      </div>
+      <div style="margin-top: 14px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">สิ่งที่ทำให้ยาก (เลือกได้หลายข้อ)</div>
+      <div class="bar-row"><div class="bar-label">เนื้อหาอัดแน่น/เร็วเกินไป</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#F0957B; color:#4A1B0C;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">พื้นฐานจากวิชาก่อนหน้าไม่พอ</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#F0957B; color:#4A1B0C;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">เวลาเรียนไม่พอสำหรับทำความเข้าใจ</div><div class="bar-track"><div class="bar-fill" style="width:43%; background:#FAC775; color:#412402;">6</div></div><div class="bar-count">6</div></div>
+      <div class="bar-row"><div class="bar-label">วิธีการสอนไม่เหมาะสม</div><div class="bar-track"><div class="bar-fill" style="width:21%; background:#B4B2A9; color:#2C2C2A;">3</div></div><div class="bar-count">3</div></div>
+    </div>
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ศิษย์เก่า: หลักสูตรเตรียมพร้อมหลังจบได้ดีแค่ไหน (n=20)</div>
+      <div class="likert-row">
+        <div class="likert-seg" style="background:#5DCAA5; color:#04342C; width:30px;">มาก 2</div>
+        <div class="likert-seg" style="background:#9FE1CB; color:#085041; width:150px;">ค่อนข้างมาก 12</div>
+        <div class="likert-seg" style="background:#FAC775; color:#412402; width:50px;">ปานกลาง 3</div>
+        <div class="likert-seg" style="background:#F7C1C1; color:#791F1F; width:60px;">ค่อนข้างน้อย 3</div>
+      </div>
+      <div style="margin-top: 14px;" class="issue-card">
+        <div class="issue-head">ข้อสังเกตจากศิษย์เก่า</div>
+        <div class="issue-body">วิชาที่ถูกพูดถึงบ่อยว่าควรปรับปรุงคือ <span class="highlight">Differential Equations, Math Analysis, Stat, Numerical Analysis</span> โดยเฉพาะด้านคุณภาพผู้สอนและเนื้อหาที่ไม่ต่อเนื่อง</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">ประเด็นที่ 2 · ทักษะ: ได้รับแล้ว vs. ยังขาด</div>
+  <div class="two-col">
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ทักษะที่นักศึกษาปัจจุบันรู้สึกว่าพัฒนาแล้ว</div>
+      <div class="bar-row"><div class="bar-label">การใช้โปรแกรม/เครื่องมือคำนวณ</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#AFA9EC; color:#26215C;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">การคิดเชิงตรรกะ</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#AFA9EC; color:#26215C;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">การแก้ปัญหาโจทย์</div><div class="bar-track"><div class="bar-fill" style="width:30%; background:#CECBF6; color:#3C3489;">2</div></div><div class="bar-count">2</div></div>
+      <div class="bar-row"><div class="bar-label">การใช้คณิตฯ กับโลกความจริง</div><div class="bar-track"><div class="bar-fill" style="width:30%; background:#CECBF6; color:#3C3489;">2</div></div><div class="bar-count">2</div></div>
+      <div style="margin-top: 14px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">สิ่งที่ศิษย์เก่านำไปใช้จริง (n=20)</div>
+      <div class="bar-row"><div class="bar-label">การคิดเชิงวิเคราะห์/เหตุผล</div><div class="bar-track"><div class="bar-fill" style="width:95%; background:#7F77DD; color:#EEEDFE;">19</div></div><div class="bar-count">19</div></div>
+      <div class="bar-row"><div class="bar-label">การใช้โปรแกรม/ซอฟต์แวร์</div><div class="bar-track"><div class="bar-fill" style="width:80%; background:#AFA9EC; color:#26215C;">16</div></div><div class="bar-count">16</div></div>
+      <div class="bar-row"><div class="bar-label">ความรู้คณิตฯ เฉพาะทาง</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#CECBF6; color:#3C3489;">12</div></div><div class="bar-count">12</div></div>
+      <div class="bar-row"><div class="bar-label">soft skills / ทีม</div><div class="bar-track"><div class="bar-fill" style="width:50%; background:#CECBF6; color:#3C3489;">10</div></div><div class="bar-count">10</div></div>
+    </div>
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ทักษะที่ยังขาด (นักศึกษาปัจจุบัน)</div>
+      <div class="bar-row"><div class="bar-label">การประยุกต์ใช้</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#F0957B; color:#4A1B0C;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">การพิสูจน์</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#F0957B; color:#4A1B0C;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">การใช้ software (Python/MATLAB)</div><div class="bar-track"><div class="bar-fill" style="width:30%; background:#FAC775; color:#412402;">2</div></div><div class="bar-count">2</div></div>
+      <div class="bar-row"><div class="bar-label">การเชื่อมโยงหลายหัวข้อ</div><div class="bar-track"><div class="bar-fill" style="width:30%; background:#FAC775; color:#412402;">2</div></div><div class="bar-count">2</div></div>
+      <div style="margin-top: 14px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ทักษะที่ขาดในปีแรกของการทำงาน (ศิษย์เก่า)</div>
+      <div class="bar-row"><div class="bar-label">การอ่าน-เขียนเอกสาร</div><div class="bar-track"><div class="bar-fill" style="width:56%; background:#FAC775; color:#412402;">5</div></div><div class="bar-count">5</div></div>
+      <div class="bar-row"><div class="bar-label">ภาษาต่างประเทศ</div><div class="bar-track"><div class="bar-fill" style="width:44%; background:#FAC775; color:#412402;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">การเขียนโปรแกรม/ซอฟต์แวร์</div><div class="bar-track"><div class="bar-fill" style="width:44%; background:#FAC775; color:#412402;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">ทีม/การสื่อสารในที่ประชุม</div><div class="bar-track"><div class="bar-fill" style="width:44%; background:#FAC775; color:#412402;">4</div></div><div class="bar-count">4</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">ประเด็นที่ 3 · การสอนและการประเมิน</div>
+  <div class="two-col">
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">วิธีสอนที่ช่วยได้มากที่สุด — นักศึกษาปัจจุบัน</div>
+      <div class="bar-row"><div class="bar-label">อธิบายทฤษฎีพร้อมตัวอย่าง</div><div class="bar-track"><div class="bar-fill" style="width:79%; background:#5DCAA5; color:#04342C;">11</div></div><div class="bar-count">11</div></div>
+      <div class="bar-row"><div class="bar-label">ทำโจทย์ในห้องเรียน</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#5DCAA5; color:#04342C;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">การบ้านลำดับความยาก</div><div class="bar-track"><div class="bar-fill" style="width:57%; background:#9FE1CB; color:#04342C;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">สรุปภาพรวมก่อนลงรายละเอียด</div><div class="bar-track"><div class="bar-fill" style="width:57%; background:#9FE1CB; color:#04342C;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">อภิปราย/ถามตอบ</div><div class="bar-track"><div class="bar-fill" style="width:43%; background:#E1F5EE; color:#085041;">6</div></div><div class="bar-count">6</div></div>
+    </div>
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">วิธีสอนที่ช่วยได้ — ศิษย์เก่า</div>
+      <div class="bar-row"><div class="bar-label">ใช้โปรแกรม/visualization</div><div class="bar-track"><div class="bar-fill" style="width:79%; background:#85B7EB; color:#042C53;">11</div></div><div class="bar-count">11</div></div>
+      <div class="bar-row"><div class="bar-label">อธิบายทีละขั้นตอนบนกระดาน</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#85B7EB; color:#042C53;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">เชื่อมโยงกับสถานการณ์จริง</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#85B7EB; color:#042C53;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">ตัวอย่างโจทย์ที่หลากหลาย</div><div class="bar-track"><div class="bar-fill" style="width:64%; background:#B5D4F4; color:#042C53;">9</div></div><div class="bar-count">9</div></div>
+      <div class="bar-row"><div class="bar-label">การบ้าน/แบบฝึกหัดครอบคลุม</div><div class="bar-track"><div class="bar-fill" style="width:57%; background:#B5D4F4; color:#042C53;">8</div></div><div class="bar-count">8</div></div>
+    </div>
+  </div>
+  <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ประสิทธิภาพรูปแบบการประเมินผลปัจจุบัน (นักศึกษา n=14)</div>
+  <div class="likert-row">
+    <div class="likert-seg" style="background:#9FE1CB; color:#04342C; width:160px;">ค่อนข้างเหมาะสม 8</div>
+    <div class="likert-seg" style="background:#FAC775; color:#412402; width:100px;">ปานกลาง 5</div>
+    <div class="likert-seg" style="background:#F7C1C1; color:#791F1F; width:50px;">เหมาะสมน้อย 1</div>
+  </div>
+  <div class="issue-card" style="margin-top: 10px;">
+    <div class="issue-head">ข้อเสนอด้านการประเมิน</div>
+    <div class="issue-body">ยุค AI ทำให้ <span class="highlight">การบ้านวัดผลได้ยากขึ้น</span> · หลายคนเสนอให้เพิ่ม <span class="highlight">Quiz ในห้อง, ถาม-ตอบปากเปล่า</span> แทนหรือเสริมการบ้าน · ควรให้ feedback ที่ถูกต้องกลับไปเสมอ ไม่ปล่อยให้นักศึกษาเข้าใจผิดโดยไม่รู้ตัว</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">ประเด็นที่ 4 · Generative AI กับการเรียน (นักศึกษาปัจจุบัน)</div>
+  <div class="two-col">
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ความถี่การใช้ Gen AI</div>
+      <div class="likert-row">
+        <div class="likert-seg" style="background:#F0997B; color:#4A1B0C; width:80px;">ทุกวัน 4</div>
+        <div class="likert-seg" style="background:#FAC775; color:#412402; width:120px;">ทุกสัปดาห์ 6</div>
+        <div class="likert-seg" style="background:#E1F5EE; color:#085041; width:70px;">บางครั้ง 3</div>
+        <div class="likert-seg" style="background:#D3D1C7; color:#444441; width:30px;">ไม่ใช้ 1</div>
+      </div>
+      <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ผลของ Gen AI ต่อความเข้าใจ</div>
+      <div class="bar-row"><div class="bar-label">เข้าใจเร็วขึ้นแต่ไม่ลึก</div><div class="bar-track"><div class="bar-fill" style="width:60%; background:#FAC775; color:#412402;">6</div></div><div class="bar-count">6</div></div>
+      <div class="bar-row"><div class="bar-label">ช่วยให้เข้าใจลึกขึ้น</div><div class="bar-track"><div class="bar-fill" style="width:40%; background:#9FE1CB; color:#04342C;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">ช่วยเฉพาะตอนติดปัญหา</div><div class="bar-track"><div class="bar-fill" style="width:30%; background:#E1F5EE; color:#085041;">3</div></div><div class="bar-count">3</div></div>
+    </div>
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ใช้ Gen AI เพื่ออะไร (top)</div>
+      <div class="bar-row"><div class="bar-label">อธิบายเนื้อหาที่ไม่เข้าใจ</div><div class="bar-track"><div class="bar-fill" style="width:79%; background:#AFA9EC; color:#26215C;">11</div></div><div class="bar-count">11</div></div>
+      <div class="bar-row"><div class="bar-label">ตรวจคำตอบ/ดูวิธีทำ</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#AFA9EC; color:#26215C;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">ช่วยเขียนโค้ด/คำนวณ</div><div class="bar-track"><div class="bar-fill" style="width:71%; background:#AFA9EC; color:#26215C;">10</div></div><div class="bar-count">10</div></div>
+      <div class="bar-row"><div class="bar-label">ช่วยทำการบ้านบางขั้นตอน</div><div class="bar-track"><div class="bar-fill" style="width:64%; background:#CECBF6; color:#3C3489;">9</div></div><div class="bar-count">9</div></div>
+      <div style="margin-top: 10px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px;">สิ่งที่อยากให้หลักสูตรสอนเกี่ยวกับ AI</div>
+      <div class="tag-cloud">
+        <span class="badge badge-purple">วิธีตรวจสอบความถูกต้อง AI (9)</span>
+        <span class="badge badge-purple">ใช้ AI เพื่อเรียน ไม่ใช่ลอก (9)</span>
+        <span class="badge badge-blue">ข้อจำกัด AI ในคณิตฯ (6)</span>
+        <span class="badge badge-blue">AI กับการเขียนโค้ด (5)</span>
+        <span class="badge badge-teal">วิธี Prompt ที่ดี (5)</span>
+        <span class="badge badge-teal">การอ้างอิงการใช้ AI (4)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">ประเด็นที่ 5 · เส้นทางหลังจบ และการเตรียมพร้อม</div>
+  <div class="two-col">
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">เส้นทางหลังจบ (ศิษย์เก่า n=20)</div>
+      <div class="likert-row">
+        <div class="likert-seg" style="background:#9FE1CB; color:#04342C; width:150px;">เรียนต่อ ป.โท/เอก 11</div>
+        <div class="likert-seg" style="background:#85B7EB; color:#042C53; width:120px;">ทำงานทันที 9</div>
+      </div>
+      <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">สิ่งที่อยากให้หลักสูตรเตรียมพร้อมด้านโลกทำงาน</div>
+      <div class="bar-row"><div class="bar-label">Project-based learning</div><div class="bar-track"><div class="bar-fill" style="width:80%; background:#85B7EB; color:#042C53;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">การฝึกงาน/สหกิจศึกษา</div><div class="bar-track"><div class="bar-fill" style="width:70%; background:#85B7EB; color:#042C53;">7</div></div><div class="bar-count">7</div></div>
+      <div class="bar-row"><div class="bar-label">Soft skills ต่างๆ</div><div class="bar-track"><div class="bar-fill" style="width:40%; background:#B5D4F4; color:#042C53;">4</div></div><div class="bar-count">4</div></div>
+      <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ทักษะที่อยากได้ก่อนเรียนต่อ (n=11 เรียนต่อ)</div>
+      <div class="bar-row"><div class="bar-label">เครื่องมือ/โปรแกรมสถิติวิจัย</div><div class="bar-track"><div class="bar-fill" style="width:80%; background:#5DCAA5; color:#04342C;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">ประยุกต์คณิตฯ กับศาสตร์อื่น</div><div class="bar-track"><div class="bar-fill" style="width:70%; background:#9FE1CB; color:#085041;">7</div></div><div class="bar-count">7</div></div>
+      <div class="bar-row"><div class="bar-label">ภาษาอังกฤษเชิงวิชาการ</div><div class="bar-track"><div class="bar-fill" style="width:70%; background:#9FE1CB; color:#085041;">7</div></div><div class="bar-count">7</div></div>
+      <div class="bar-row"><div class="bar-label">การเขียนโปรแกรมขั้นสูง</div><div class="bar-track"><div class="bar-fill" style="width:50%; background:#E1F5EE; color:#085041;">5</div></div><div class="bar-count">5</div></div>
+    </div>
+    <div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">ปัจจัยที่มีผลต่อการเลือกสาขาเรียนต่อ</div>
+      <div class="bar-row"><div class="bar-label">ความสนใจส่วนตัว</div><div class="bar-track"><div class="bar-fill" style="width:82%; background:#7F77DD; color:#EEEDFE;">9</div></div><div class="bar-count">9</div></div>
+      <div class="bar-row"><div class="bar-label">ประสบการณ์จากวิชาในหลักสูตร</div><div class="bar-track"><div class="bar-fill" style="width:45%; background:#AFA9EC; color:#26215C;">5</div></div><div class="bar-count">5</div></div>
+      <div class="bar-row"><div class="bar-label">อาจารย์ที่ปรึกษาแนะนำ</div><div class="bar-track"><div class="bar-fill" style="width:36%; background:#CECBF6; color:#3C3489;">4</div></div><div class="bar-count">4</div></div>
+      <div class="bar-row"><div class="bar-label">โอกาสทางอาชีพ</div><div class="bar-track"><div class="bar-fill" style="width:36%; background:#CECBF6; color:#3C3489;">4</div></div><div class="bar-count">4</div></div>
+      <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">หลักสูตรควรช่วยคนลังเลเรียนต่ออย่างไร</div>
+      <div class="bar-row"><div class="bar-label">จัดระบบอาจารย์ที่ปรึกษาเรียนต่อ</div><div class="bar-track"><div class="bar-fill" style="width:80%; background:#9FE1CB; color:#085041;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">จัดกิจกรรมแนะนำเรียนต่อ</div><div class="bar-track"><div class="bar-fill" style="width:80%; background:#9FE1CB; color:#085041;">8</div></div><div class="bar-count">8</div></div>
+      <div class="bar-row"><div class="bar-label">เรียนควบ 2 ปริญญา</div><div class="bar-track"><div class="bar-fill" style="width:20%; background:#E1F5EE; color:#085041;">2</div></div><div class="bar-count">2</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">ข้อเสนอแนะเชิงโครงสร้างจากศิษย์เก่า</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <div class="issue-card"><div class="issue-head">🗑 ตัดออก / ลดความสำคัญ</div><div class="issue-body">วิชา MUGE/LATH100 บังคับ · วิชาชีวะ/เคมี/ฟิสิกส์ปี 1 (ควรเป็นวิชาเลือก) · Pure Math สายลึกบางวิชา (ขยับเป็นวิชาเลือก)</div></div>
+    <div class="issue-card"><div class="issue-head">🔧 ปรับปรุง</div><div class="issue-body">DE/BVP — เนื้อหาและผู้สอน · Math Analysis — ลำดับการสอน · Stat — เน้น interpretation มากกว่า method · SCMA248 — เรียนภาษาเดียวทั้งเทอมดีกว่า</div></div>
+    <div class="issue-card"><div class="issue-head">➕ เพิ่มเติม</div><div class="issue-body">วิชา Programming ขั้นสูง (บังคับ) · SQL / Git / Linux · Project-based ที่ใช้โจทย์จริง · ฝึกงาน/สหกิจบังคับ · Career Day / กิจกรรมแนะนำเรียนต่อ</div></div>
+    <div class="issue-card"><div class="issue-head">⚖️ โครงสร้างวิชาเลือก</div><div class="issue-body">ระบบโหวตเปิดวิชาไม่เป็นธรรมกับกลุ่มน้อย · เสนอให้โควต้าโหวตแต่ละ track เท่ากัน · เสนอจำกัด Applied track ≤9 หน่วยกิต</div></div>
+  </div>
+</div>
+
+</div>
